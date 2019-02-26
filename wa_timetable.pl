@@ -12,10 +12,10 @@ sub search {
 
 	#Select the term
 	$term = $ARGV[0];
-
 	$mech->field("_ctl0:MainContent:ddlTerm", $term);
+	
+	#Select the subject
 	$subject = $ARGV[1];
-
 	$mech->field("_ctl0:MainContent:ddlSubj_1", $subject);
 
 	#Click the Submit Button
@@ -42,7 +42,6 @@ END_MSG
 	print $message;
 }#end help();
 
-
 #subjects
 sub subjects {
 	use WWW::Mechanize;
@@ -61,7 +60,6 @@ sub subjects {
 		print ("$sub\n");
 	}
 }#end subjects();
-
 
 #terms
 sub terms {
